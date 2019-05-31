@@ -19,16 +19,16 @@ This is an image classification problem on Kaggle Datasets.The dataset contains 
 
 ## Breakdown of the code:
 
-1.* Loading the dataset *: Load the data and import the libraries.
-2.* Data Preprocessing *:
+1.* Loading the dataset : Load the data and import the libraries.
+2.* Data Preprocessing :
    * Reading the images,labels stored in 2 folders(Parasitized,Uninfected).
    * Plotting the Uninfected and Parasitized images with their respective labels.
    * Normalizing the image data.
    * Train,test split
-3.*Data Augmentation *: Augment the train and validation data using ImageDataGenerator
-4.Creating and Training the Model: Create a cnn model in KERAS.
-5.Evaluation: Display the plots from the training history.
-6.Submission: Run predictions with model.predict, and create confusion matrix.
+3.* Data Augmentation : Augment the train and validation data using ImageDataGenerator
+4.* Creating and Training the Model: Create a cnn model in KERAS.
+5.* Evaluation: Display the plots from the training history.
+6.* Submission: Run predictions with model.predict, and create confusion matrix.
 
 
 
