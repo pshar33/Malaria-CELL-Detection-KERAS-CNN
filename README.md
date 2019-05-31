@@ -32,6 +32,10 @@ This is an image classification problem on Kaggle Datasets.The dataset contains 
 5. Evaluation: Display the plots from the training history.
 6. Submission: Run predictions with model.predict, and create confusion matrix.
 
+## Accuracy and loss plots
+
+![alt text](https://github.com/pshar33/Malaria-CELL-Detection-KERAS-CNN/blob/master/loss%2Cacc.png)
+
 
 
 ## Results:
