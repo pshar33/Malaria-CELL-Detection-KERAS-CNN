@@ -15,6 +15,8 @@
 
 This is an image classification problem on Kaggle Datasets.The dataset contains 2 folders - Infected - Uninfected and has been originally taken from a government data website  https://ceb.nlm.nih.gov/repositories/malaria-datasets/ .
 
+![alt text](https://github.com/pshar33/Malaria-CELL-Detection-KERAS-CNN/blob/master/infected%2Cuninfected.png)
+
 
 
 ## Breakdown of the code:
