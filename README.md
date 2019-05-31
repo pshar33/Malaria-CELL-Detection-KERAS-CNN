@@ -3,14 +3,19 @@ The data can be downloaded from the following Kaggle dataset  https://www.kaggle
 Link to my Kaggle kernel https://www.kaggle.com/parthsharma5795/malaria-detection-keras-cnn-95-accuracy
 
 Code Requirements
+
 Numpy
 Pandas
 cv2
 Seaborn,matplotlib
 Keras
 
+
 Description
+
 This is an image classification problem on Kaggle Datasets.The dataset contains 2 folders - Infected - Uninfected and has been originally taken from a government data website  https://ceb.nlm.nih.gov/repositories/malaria-datasets/ .
+
+
 
 Breakdown of the code:
 
@@ -24,6 +29,8 @@ Breakdown of the code:
 4.Creating and Training the Model: Create a cnn model in KERAS.
 5.Evaluation: Display the plots from the training history.
 6.Submission: Run predictions with model.predict, and create confusion matrix.
+
+
 
 Results:
 
