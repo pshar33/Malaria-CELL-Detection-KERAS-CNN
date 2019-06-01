@@ -30,6 +30,11 @@ uninfected = os.listdir('../input/cell_images/cell_images/Uninfected/')
 data = []
 labels = []
 
+
+#  Get the original labels from the test folder
+# The try,catch statements are used to avoid the unexpected errors .
+# The labels from NORMAL and PNEUMONIA are one hot encoded using to_categorical.
+
 for i in infected:
     try:
 
@@ -68,6 +73,10 @@ np.save('Labels' , labels)
 print('Cells : {} | labels : {}'.format(data.shape , labels.shape))
 
 
+
+
+# Comparative plots between infected and uninfected cells
+
 plt.figure(1, figsize = (15 , 7))
 plt.subplot(1 , 2 , 1)
 plt.imshow(data[0])
@@ -91,6 +100,10 @@ data = data.astype(np.float32)
 labels = labels.astype(np.int32)
 data = data/255
 
+
+
+# Train, test split for testing in 80, 20 ratio
+
 from sklearn.model_selection import train_test_split
 
 train_x , eval_x , train_y , eval_y = train_test_split(data , labels ,
@@ -103,6 +116,10 @@ train_x , eval_x , train_y , eval_y = train_test_split(data , labels ,
 print('train data shape {} ,eval data shape {} '.format(train_x.shape, eval_x.shape))
 
 
+
+
+
+# DATA AUGMENTATION
 
 train_aug = ImageDataGenerator(
     rescale=1./255,
@@ -126,6 +143,8 @@ val_gen = val_aug.flow(
 
 
 
+# function for creating loss, accuracy plots
+
 def show_final_history(history):
     fig, ax = plt.subplots(1, 2, figsize=(15,5))
     ax[0].set_title('loss')
@@ -137,6 +156,10 @@ def show_final_history(history):
     ax[0].legend()
     ax[1].legend()
 
+
+    
+    
+# functions for building the CNN model
 
 def ConvBlock(model, layers, filters, name):
     for i in range(layers):
@@ -223,6 +246,8 @@ model.save('malaria.h5')
 
 
 
+#Prediction
+
 preds = model.predict(eval_x, batch_size=16)
 preds = np.argmax(preds, axis=-1)
 
@@ -235,6 +260,9 @@ print(preds.shape)
 print(np.unique(orig_test_labels))
 print(np.unique(preds))
 
+
+
+#Plotting the confusion matrix
 
 from sklearn.metrics import confusion_matrix
 cm=confusion_matrix(orig_test_labels , preds)
