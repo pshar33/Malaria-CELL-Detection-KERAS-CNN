@@ -41,4 +41,4 @@ This is an image classification problem on Kaggle Datasets.The dataset contains 
 ## Results:
 
 - The accuracy for the test dataset came out to be 97%. 
-- The link to my kaggle kernel is https://www.kaggle.com/parthsharma5795/malaria-detection-keras-cnn-95-accuracy which is a jupyter notebook.Please feel free to leave a feedback or comment.
+- The link to my kaggle kernel is https://www.kaggle.com/parthsharma5795/malaria-detection-keras-cnn-95-accuracy which is a jupyter notebook.Please feel free to leave a feedback or comment and leave an upvote if you found it to be helpful !!
